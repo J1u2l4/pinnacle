@@ -1,0 +1,687 @@
+/* PINNACLE PRIMARY SCHOOL — reference-inspired layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #102A43;
+    --deep-navy: #091B2B;
+    --blue: #0876C9;
+    --orange: #F47721;
+    --gold: #D9AD55;
+    --light: #F3F6F9;
+    --text: #172B40;
+    --muted: #687786;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: #fff;
+    line-height: 1.6;
+}
+
+/* CONTACT STRIP */
+.contact-strip {
+    background: var(--deep-navy);
+    color: #DCE5ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 8px 18px;
+    font-size: 12px;
+}
+
+.contact-strip a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.strip-divider {
+    color: var(--orange);
+}
+
+/* NAVIGATION */
+.site-header {
+    background: var(--navy);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 12px 25px;
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    min-width: max-content;
+}
+
+.brand img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    background: white;
+    border-radius: 6px;
+}
+
+.brand-name {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    line-height: 1.1;
+}
+
+.brand-name small {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+    margin-top: 5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color .25s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* HERO — dark photographic background like the supplied reference */
+.hero {
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    padding: 75px 10%;
+    color: white;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 28, 48, .96) 0%,
+            rgba(16, 42, 67, .88) 48%,
+            rgba(16, 42, 67, .48) 100%
+        ),
+        url("assets/school-life-group.jpeg") center 42% / cover no-repeat;
+}
+
+.hero-copy {
+    max-width: 700px;
+}
+
+.hero .eyebrow {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.12;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--gold);
+}
+
+.hero-text {
+    color: #DCE5ED;
+    max-width: 560px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .25s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.button-primary {
+    background: var(--orange);
+    color: white;
+}
+
+.button-outline {
+    border: 1px solid white;
+    color: white;
+}
+
+/* GENERAL SECTIONS */
+.section {
+    padding: 80px 10%;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--orange);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2,
+.uniform h2 {
+    color: var(--navy);
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:not(.eyebrow) {
+    color: var(--muted);
+}
+
+/* ACADEMICS */
+.academics {
+    background: var(--light);
+}
+
+.feature-grid {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    border-bottom: 3px solid var(--orange);
+}
+
+.feature-card span {
+    color: var(--orange);
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.feature-card h3 {
+    color: var(--navy);
+    margin: 12px 0;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* SCHOOL LIFE GALLERY */
+.school-life {
+    background: white;
+}
+
+.gallery {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery figure {
+    background: var(--light);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery img {
+    width: 100%;
+    height: 260px;
+    display: block;
+    object-fit: cover;
+    transition: transform .35s ease;
+}
+
+.gallery figure:hover img {
+    transform: scale(1.035);
+}
+
+.gallery figcaption {
+    padding: 14px 17px;
+    color: var(--navy);
+    font-weight: 700;
+}
+
+/* UNIFORM */
+.uniform {
+    background: var(--light);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.uniform-copy {
+    max-width: 520px;
+    margin: auto;
+}
+
+.uniform-copy > p:not(.eyebrow) {
+    color: var(--muted);
+    margin: 15px 0;
+}
+
+.uniform-visual img {
+    width: 100%;
+    max-height: 390px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.small-note {
+    font-size: 13px;
+}
+
+/* ADMISSIONS */
+.admissions {
+    background: var(--navy);
+    color: white;
+}
+
+.admissions .section-heading h2 {
+    color: white;
+}
+
+.admissions .section-heading > p:not(.eyebrow) {
+    color: #DCE5ED;
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--deep-navy);
+    color: #DCE5ED;
+    padding: 45px 8% 0;
+}
+
+.footer-main {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.3fr;
+    gap: 35px;
+    padding-bottom: 35px;
+}
+
+.footer-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    background: white;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.footer-main h2,
+.footer-main h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-main p {
+    color: #DCE5ED;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.footer-main a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-main a:hover {
+    color: var(--gold);
+}
+
+.motto {
+    color: var(--gold) !important;
+    font-weight: 700;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.15);
+    text-align: center;
+    padding: 18px;
+    font-size: 12px;
+}
+
+/* RESPONSIVE NAVIGATION AND LAYOUT */
+@media (max-width: 950px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 24px;
+        background: var(--navy);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .uniform {
+        grid-template-columns: 1fr;
+    }
+
+    .uniform-copy {
+        max-width: 750px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .contact-strip {
+        gap: 6px 10px;
+        font-size: 11px;
+    }
+
+    .strip-divider {
+        display: none;
+    }
+
+    .navbar {
+        min-height: 72px;
+        padding: 10px 16px;
+    }
+
+    .brand img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .brand-name {
+        font-size: 18px;
+    }
+
+    .brand-name small {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 60px 7%;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .section {
+        padding: 60px 7%;
+    }
+
+    .section-heading h2,
+    .uniform h2 {
+        font-size: 28px;
+    }
+
+    .feature-grid,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 250px;
+    }
+
+    .uniform-visual img {
+        max-height: 300px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+
+/* ANDROID / SMALL-SCREEN REFINEMENTS */
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 950px) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+        min-height: 490px;
+        padding: 55px 6%;
+        gap: 12px;
+    }
+
+    .hero-cartoon {
+        width: 100%;
+        max-width: 410px;
+        max-height: 330px;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .contact-strip {
+        padding: 8px 12px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .nav-links {
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        min-height: auto;
+        padding: 46px 6% 30px;
+        background-position: 58% center;
+        gap: 22px;
+    }
+
+    .hero-copy {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 9vw, 43px);
+        letter-spacing: -1px;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-text {
+        font-size: 15px;
+        line-height: 1.65;
+        margin: 17px 0 23px;
+    }
+
+    .hero-actions {
+        gap: 10px;
+    }
+
+    .button {
+        padding: 12px 17px;
+        font-size: 14px;
+    }
+
+    .hero-art {
+        width: 100%;
+        min-height: 0;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .hero-cartoon {
+        display: block;
+        width: min(88%, 340px);
+        height: auto;
+        max-height: 245px;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 12px;
+    }
+
+    .section {
+        padding: 52px 6%;
+    }
+
+    .section-heading h2,
+    .uniform h2 {
+        font-size: clamp(25px, 7vw, 31px);
+    }
+
+    .feature-grid,
+    .gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .feature-card {
+        padding: 24px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: clamp(210px, 65vw, 300px);
+        object-fit: cover;
+    }
+
+    .uniform {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 22px;
+    }
+
+    .uniform-visual img {
+        width: 100%;
+        height: auto;
+        max-height: 270px;
+        object-fit: contain;
+    }
+
+    .footer-main {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 23px;
+    }
+
+    .footer-main > div {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 380px) {
+    .brand-name {
+        font-size: 16px;
+    }
+
+    .brand-name small {
+        font-size: 9px;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-strip {
+        font-size: 10px;
+    }
+}
